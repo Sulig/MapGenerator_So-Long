@@ -11,7 +11,7 @@
 Is a **Map Generator** for [`so-long`](https://github.com/Sulig/So_Long) project. <br />
 It will generate for you a closed random map:
   - With random width & height
-  - Random number of coins
+  - Random number of items
   - Random position of player
   - Random positon of exit
 
@@ -32,12 +32,13 @@ You have several options:
        _with_ or _without_ the number of maps desired
 
   - (Considering) Visit my (not created yet) web for generate a map!
-     
+***
+
 ### Well, I cloned the repo, What I can do?
 #### Change the Max valors of `Map Width` and `Map Height`
-You can control the `MAX_WIDTH` && `MAX_HEIGHT` of the maps, just edite `map_const.h` included in `/inc` <br />
+You can control the `MAP_MAX_WIDTH` && `MAP_MAX_HEIGHT` of the maps, just edite `map_const.h` included in `/inc` <br />
 > [!NOTE]\
-> By default, the `MAX_WIDTH` && `MAX_HEIGHT` are defined with the `MAX_INT` definition.
+> By default, the `MAP_MAX_WIDTH` && `MAP_MAX_HEIGHT` are defined with the `MAX_INT` definition.
 > `MAX_INT` definition = 2147483647
 > The values **can't** be more small than:
 > 3 in WIDTH & 5 in HEIGHT
@@ -45,22 +46,22 @@ You can control the `MAX_WIDTH` && `MAX_HEIGHT` of the maps, just edite `map_con
 > 5 in WIDTH & 3 in HEIGHT
 
 #### Change the HEIGHT and WIDTH of map
-You can directy set the desired `HEIGHT` and `WIDTH` of the maps! <br />
+You can directy set the desired `MAP_HEIGHT` and `MAP_WIDTH` of the maps! <br />
 Only set that valors on `map_const.h` included in `/inc` <br />
 > [!NOTE]\
-> By default, the `WIDTH` && `HEIGHT` are defined with `0`
-> If the values of `WIDTH` && `HEIGHT` are more small than:
+> By default, the `MAP_WIDTH` && `MAP_HEIGHT` are defined with `0`
+> If the values of `MAP_WIDTH` && `MAP_HEIGHT` are more small than:
 > 3 in WIDTH & 5 in HEIGHT
 > or
 > 5 in WIDTH & 3 in HEIGHT
-> The `WIDTH` && `HEIGHT` will be random.
+> The `MAP_WIDTH` && `MAP_HEIGHT` will be random.
 
-#### Set the Cuantity of coins
-Just set the `NUM_OF_COINS` with diferent number, on `map_const.h` included in `/inc` <br />
+#### Set the Cuantity of Items
+Just set the `NUM_OF_ITEMS` with diferent number, on `map_const.h` included in `/inc` <br />
 > [!NOTE]\
-> By default, the `NUM_OF_COINS` are defined with `0`
-> * If = 0 -> Number of coins will be random. (Can't be 0)
-> * > 0    -> Number of coins will be that number.
+> By default, the `NUM_OF_ITEMS` are defined with `0`
+> * If = 0 -> Number of items will be random. (Can't be 0)
+> * > 0    -> Number of items will be that number.
 
 #### More interesting things
 In my `Makefile` you will encounter two variables you can edit.
