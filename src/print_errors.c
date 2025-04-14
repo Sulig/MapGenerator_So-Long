@@ -6,11 +6,11 @@
 /*   By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 19:51:53 by sadoming          #+#    #+#             */
-/*   Updated: 2025/03/31 20:03:10 by sadoming         ###   ########.fr       */
+/*   Updated: 2025/04/14 18:13:27 by sadoming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../inc/map_generator.h"
+#include "../inc/map_generator.h"
 
 /* Print Malloc error */
 void	print_errmalloc(void)

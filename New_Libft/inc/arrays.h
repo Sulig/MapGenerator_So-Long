@@ -6,7 +6,7 @@
 /*   By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 18:09:37 by sadoming          #+#    #+#             */
-/*   Updated: 2025/01/15 20:07:23 by sadoming         ###   ########.fr       */
+/*   Updated: 2025/04/14 20:17:13 by sadoming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ void	**arrpush(void **org, void *add);
 
 char	**ft_arr_strcreate(size_t heigth, size_t width);
 char	**ft_strarrdup(char **to_copy);
+char	**ft_arrcpy(char **dest, char **src);
 
 #endif

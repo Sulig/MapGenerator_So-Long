@@ -6,7 +6,7 @@
 /*   By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 18:16:33 by sadoming          #+#    #+#             */
-/*   Updated: 2025/03/31 19:55:38 by sadoming         ###   ########.fr       */
+/*   Updated: 2025/04/14 19:27:55 by sadoming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 # define MAP_NAME_FILE	"Generated_Map_"	// Default map name
 # define MAP_NAME_EXT	".ber"				// Default map extension
 
-# define MAX_MAP_WIDTH	MAX_INT	// Max map width
-# define MAX_MAP_HEIGHT	MAX_INT	// Max map height
+# define MAX_MAP_WIDTH	20	// Max map width
+# define MAX_MAP_HEIGHT	20	// Max map height
 
 # define MAP_WIDTH		0
 # define MAP_HEIGHT		0
@@ -29,7 +29,7 @@
 
 # define MAP_CHARS		"01PEC"	// Map characters
 # define CHAR_WALL		'1'	// Wall character
-# define CHAR_SPACE		'0'	// Space character
+# define CHAR_FLOOR		'0'	// Space character
 # define CHAR_PLAYER	'P'	// Player character
 # define CHAR_EXIT		'E'	// Exit character
 # define CHAR_ITEM		'C'	// Item character

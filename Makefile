@@ -6,17 +6,19 @@
 #    By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/14 17:25:36 by sadoming          #+#    #+#              #
-#    Updated: 2025/03/31 20:04:52 by sadoming         ###   ########.fr        #
+#    Updated: 2025/04/14 18:44:32 by sadoming         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ## EDITABLE VARIABLES
-MAPDIR	=	GeneratedMaps	##	The directory where the *.ber will be saved
-MAPNUM	=	5				##	Number of maps to create (each one in diferent file)
+##	The directory where the *.ber will be saved
+MAPDIR	= GeneratedMaps
+##	Number of maps to create (each one in diferent file)
+MAPNUM	= 5
 # ------------------ #
 
-NAME		:=	map_gen		##	Ejecutable file name
-
+##	Ejecutable file name
+NAME		:= map_gen
 # ------------------ #
 
 ### DO NOT TOUCH BELLOW THIS LINE ###
@@ -56,7 +58,8 @@ LIB_LIB		:=	$(LIB_DIR)/libft.a
 
 # Sorces:
 SRC_SRC	:=	map_generator_main.c print_errors.c init_map_vars.c\
-			map_generator.c randomRange.c
+			generate_map.c randomRange.c print_map_t.c \
+			check_map_sol.c
 
 SRC := $(addprefix $(SRC_DIR), $(SRC_SRC))
 
@@ -72,8 +75,8 @@ vpath %.o $(OBJ_DIR)
 #-------------------------------------------------------------#
 all: $(LIB_LIB) $(NAME)
 	@make -C $(LIB_DIR)
-	@echo "$(RG)\n~ **************************************** ~\n"
-	@echo "  ~\t     $(NAME) is ready!\t\t ~\n"
+	@echo "$(RG)\n~ **************************************** ~"
+	@echo "  ~\t     $(NAME) is ready!\t\t ~"
 	@echo "~ **************************************** ~$(DEF)\n"
 	@make -s author
 
@@ -88,14 +91,16 @@ libft:
 	fi
 #-------------------------------------------------------------#
 author:
-	@echo "$(P)~ **************************************** ~\n"
+	@echo "\n$(P)~ **************************************** ~"
 	@echo " ~\t      Made by Sadoming \t         ~"
-	@echo "~ **************************************** ~\n$(DEF)\n"
+	@echo "~ **************************************** ~$(DEF)\n"
 #-------------------------------------------------------------#
 help:
 	@echo "\033[1;37m\n ~ Posible comands:\n"
 	@echo "\t~ \t\t\t #-> Make $(NAME)\n"
 	@echo "\t~ all  \t\t #-> Make $(NAME)\n"
+	@echo "\t~ libft \t #-> Make Libft\n"
+	@echo "\t~ gen  \t\t #-> Generate $(MAPNUM) maps\n"
 	@echo "\t~ clean \t #-> Clean *.o\n"
 	@echo "\t~ fclean \t #-> Clean all\n"
 	@echo "\t~ clear \t #-> Clean all & clear\n"
@@ -116,11 +121,11 @@ gen: all $(NAME)
 	@if [ -d $(MAPDIR) ]; then \
 		echo "$(DEF)OK! Dir exists\n"; \
 	else \
-		@mkdir -p $(MAPDIR); \
+		mkdir -p $(MAPDIR); \
 	fi
-	@echo "$(C)\n~ **************************************** ~\n"
-	@echo " ~ Generating $(MAPNUM) maps in $(MAPDIR)\n"
-	@echo "\n~ **************************************** ~ $(DEF)\n"
+	@echo "$(C)\n~ **************************************** ~"
+	@echo " ~ Generating $(MAPNUM) maps in $(MAPDIR)"
+	@echo "~ **************************************** ~ $(DEF)\n"
 	@./$(NAME) $(MAPDIR) $(MAPNUM)
 #-------------------------------------------------------------#
 # ******************************************************************************* #

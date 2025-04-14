@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_arrcreate.c                                     :+:      :+:    :+:   */
+/*   ft_arrcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/15 20:03:48 by sadoming          #+#    #+#             */
-/*   Updated: 2025/04/14 19:56:50 by sadoming         ###   ########.fr       */
+/*   Created: 2025/04/14 20:13:44 by sadoming          #+#    #+#             */
+/*   Updated: 2025/04/14 20:19:46 by sadoming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/arrays.h"
 #include "../../inc/memory.h"
+#include "../../inc/lenght.h"
 
-/* Creates an array of type `char **` */
-char	**ft_arr_strcreate(size_t heigth, size_t width)
+/*
+ * Copy the src array to the dest array
+ * *Return NULL if !src || !dest
+ * *Return dest
+ * ** This will not reserve memory for dest
+ * ** Use ft_arrdup if you want to reserve memory
+*/
+char	**ft_arrcpy(char **dest, char **src)
 {
-	char	**new_arr;
 	size_t	i;
 
+	if (!dest || !src)
+		return (NULL);
 	i = 0;
-	if (!heigth || !width)
-		return (NULL);
-	new_arr = ft_calloc(heigth, sizeof(char *));
-	if (!new_arr)
-		return (NULL);
-	while (i < heigth)
+	while (src[i])
 	{
-		new_arr[i] = ft_calloc(width, sizeof(char ));
-		if (!new_arr)
-		{
-			new_arr = ft_free_arrstr(new_arr);
-			return (NULL);
-		}
+		dest[i] = ft_memcpy(dest[i], src[i], ft_strlen(src[i]));
 		i++;
 	}
-	return (new_arr);
+	dest[i] = NULL;
+	return (dest);
 }

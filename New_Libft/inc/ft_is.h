@@ -6,7 +6,7 @@
 /*   By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 18:35:29 by sadoming          #+#    #+#             */
-/*   Updated: 2025/03/31 19:15:43 by sadoming         ###   ########.fr       */
+/*   Updated: 2025/04/14 18:10:48 by sadoming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ int		ft_isalpha_all(char *str);
 int		ft_isascii_all(char *str);
 int		ft_isdigit_all(char *str);
 int		ft_isprint_all(char *str);
-
+int		ft_is_cap_all(char *str);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 19:45:31 by sadoming          #+#    #+#             */
-/*   Updated: 2025/03/31 19:13:05 by sadoming         ###   ########.fr       */
+/*   Updated: 2025/04/14 18:10:17 by sadoming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_isalnum(int c)
 		return (1);
 }
 
-int ft_isalnum_all(char *str)
+int	ft_isalnum_all(char *str)
 {
 	while (*str)
 	{
