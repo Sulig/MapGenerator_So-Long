@@ -6,7 +6,7 @@
 /*   By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 19:04:16 by sadoming          #+#    #+#             */
-/*   Updated: 2025/04/14 20:21:20 by sadoming         ###   ########.fr       */
+/*   Updated: 2025/04/16 15:10:06 by sadoming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,8 @@ static t_map	*init_map(t_map *map)
 	map->map = ft_arr_strcreate(map->height, map->width);
 	if (!map->map)
 		print_errmalloc();
+	map->size.y = map->height;
+	map->size.x = map->width;
 	return (map);
 }
 

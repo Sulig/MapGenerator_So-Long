@@ -6,7 +6,7 @@
 /*   By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 18:38:43 by sadoming          #+#    #+#             */
-/*   Updated: 2025/04/14 18:36:24 by sadoming         ###   ########.fr       */
+/*   Updated: 2025/04/16 16:24:33 by sadoming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ typedef struct s_map
 	char		**sol;
 	size_t		height;
 	size_t		width;
+	t_lcn		size;
 	size_t		free_cells;
 	size_t		players;
 	size_t		exits;
@@ -55,6 +56,8 @@ typedef struct s_map
 	t_lcn		player;
 	t_lcn		start;
 	t_lcn		exit;
+	t_lcn		item;
+	t_lcn		path;
 	char		*directory;
 	size_t		num_maps;
 	size_t		actual_map;

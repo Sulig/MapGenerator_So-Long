@@ -6,7 +6,7 @@
 /*   By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 18:16:33 by sadoming          #+#    #+#             */
-/*   Updated: 2025/04/14 19:27:55 by sadoming         ###   ########.fr       */
+/*   Updated: 2025/04/16 17:09:05 by sadoming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@
 # define CHAR_EXIT		'E'	// Exit character
 # define CHAR_ITEM		'C'	// Item character
 # define CHAR_ENEMY		'\0'	// Enemy character
+
+# define CHAR_FILL		'+'	// Fill character
 
 /*		 ## ERRORS CONSTS ##		*/
 # define MALLOC_ERROR	"Insuficient Memory or Malloc Error\n"

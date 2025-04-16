@@ -6,7 +6,7 @@
 /*   By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 19:50:02 by sadoming          #+#    #+#             */
-/*   Updated: 2024/10/01 13:47:08 by sadoming         ###   ########.fr       */
+/*   Updated: 2025/04/16 16:51:37 by sadoming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@
 # define CONVERTER_H
 
 # include <stdlib.h>
+
+/* BASES */
+# define BASE_2		"01"
+# define BASE_8		"01234567"
+# define BASE_10	"0123456789"
+# define BASE_16	"0123456789abcdef"
+# define BASE_16_UP	"0123456789ABCDEF"
 
 /* CONVERSIONS */
 int		ft_atoi(const char *str);

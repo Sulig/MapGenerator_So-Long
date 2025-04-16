@@ -6,7 +6,7 @@
 #    By: sadoming <sadoming@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/14 17:25:36 by sadoming          #+#    #+#              #
-#    Updated: 2025/04/14 18:44:32 by sadoming         ###   ########.fr        #
+#    Updated: 2025/04/16 17:21:38 by sadoming         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,7 +59,8 @@ LIB_LIB		:=	$(LIB_DIR)/libft.a
 # Sorces:
 SRC_SRC	:=	map_generator_main.c print_errors.c init_map_vars.c\
 			generate_map.c randomRange.c print_map_t.c \
-			check_map_sol.c
+			check_map_sol.c open_path.c utilities.c \
+			generate_file.c
 
 SRC := $(addprefix $(SRC_DIR), $(SRC_SRC))
 
@@ -124,9 +125,11 @@ gen: all $(NAME)
 		mkdir -p $(MAPDIR); \
 	fi
 	@echo "$(C)\n~ **************************************** ~"
-	@echo " ~ Generating $(MAPNUM) maps in $(MAPDIR)"
+	@echo " ~ \t Generating $(MAPNUM) maps in $(MAPDIR)"
 	@echo "~ **************************************** ~ $(DEF)\n"
 	@./$(NAME) $(MAPDIR) $(MAPNUM)
+	@mv *.ber ./$(MAPDIR)
+	@echo "$(B) ~ The maps are in /$(MAPDIR) ~\n"
 #-------------------------------------------------------------#
 # ******************************************************************************* #
 # Compiling Region:
